@@ -1,10 +1,10 @@
 {
-    "id": "obsidian-leaflet-plugin",
-    "name": "Leaflet",
-    "description": "Interactive maps inside your notes",
-    "version": "7.0.0",
+    "id": "axlc-mapbox-revamped",
+    "name": "Mapbox (Revamped)",
+    "version": "7.1.0",
     "minAppVersion": "0.12.12",
-    "author": "Jeremy Valentine",
-    "repo": "valentine195/obsidian-leaflet-plugin",
+    "description": "Interactive maps inside your notes. Private revamp of Leaflet by Jeremy Valentine.",
+    "author": "axelcypher",
+    "authorUrl": "https://github.com/axelcypher",
     "isDesktopOnly": false
 }

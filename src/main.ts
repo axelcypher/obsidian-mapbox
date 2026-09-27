@@ -368,7 +368,7 @@ export default class ObsidianLeaflet extends Plugin {
     }
     get configDirectory() {
         if (!this.data.configDirectory) return;
-        return `${this.data.configDirectory}/plugins/obsidian-leaflet-plugin`;
+        return `${this.data.configDirectory}/plugins/${this.manifest.id}`;
     }
     get configFilePath() {
         if (!this.data.configDirectory) return;

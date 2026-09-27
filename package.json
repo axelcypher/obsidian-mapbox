@@ -1,7 +1,8 @@
 {
-    "name": "obsidian-leaflet",
-    "version": "7.0.0",
-    "description": "Leaflet integration for Obsidian.md",
+    "name": "axlc-mapbox-revamped",
+    "version": "7.1.0",
+    "private": true,
+    "description": "Interactive maps inside your notes. Private revamp of Leaflet by Jeremy Valentine.",
     "main": "main.js",
     "scripts": {
         "dev": "export NODE_ENV=development && npm run build",
@@ -10,7 +11,6 @@
         "build-es": "node ./esbuild.config.mjs production"
     },
     "keywords": [],
-    "author": "",
     "license": "MIT",
     "devDependencies": {
         "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -62,5 +62,10 @@
     },
     "dependencies": {
         "pako": "^2.1.0"
+    },
+    "author": "axelcypher",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/axelcypher/obsidian-mapbox.git"
     }
 }

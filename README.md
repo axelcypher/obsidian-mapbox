@@ -1,18 +1,27 @@
-# Obsidian Leaflet
-> **Development Status**: Maintenance Mode
-> 
-> Due to a glut of high priority Javalent plugin projects, this plugin is now entering maintenance mode for the time being. This is **not** a permanent status.
-> - PR's will be reviewed.
-> - *Yay* bugs will be reviewed and worked if able.
-> - Feature Requests **will not** be worked.
+# Mapbox (Revamped)
+
+> **Private revamp.** This is a personal rewrite of [Leaflet](https://github.com/javalent/obsidian-leaflet) by
+> [Jeremy Valentine](https://github.com/valentine195), maintained by [axelcypher](https://github.com/axelcypher)
+> for my own use. It is not published in the Obsidian community plugin directory.
+> All credit for the original plugin goes to its author. Please report issues with this
+> version here, not upstream.
+
+## What's different in this revamp
+
+- **Plugin identity:** own plugin ID `axlc-mapbox-revamped` and name *Mapbox (Revamped)*, so it can run next to the original Leaflet plugin. Maps are still created with `leaflet` code blocks.
+- **Based on upstream `main`** after 6.0.5, including the fix that applies `zoomMarkers` on first render.
+- **Config directory sync** uses this plugin's own ID instead of the hard-coded `obsidian-leaflet-plugin` folder.
+- **Release workflow:** streamlined build & release workflow shared with my other revamps (release-please and publish steps removed).
+
+No further functional changes yet – everything below is the original documentation.
 
 ---
 
 Adds interactable mapping functionality to Obsidian.md, using [Leaflet.js](https://leafletjs.com/)
 
-<img src="https://raw.githubusercontent.com/valentine195/obsidian-leaflet-plugin/master/images/7d595a3db9bf0eff9f2a2150819d2bd6956ddcd8.gif">
+<img src="./images/7d595a3db9bf0eff9f2a2150819d2bd6956ddcd8.gif">
 
-<img src="https://raw.githubusercontent.com/valentine195/obsidian-leaflet-plugin/master/images/275ff1f560bb6dec0d4fc02b267a7f63860f20c9_2_690x262.jpeg">
+<img src="./images/275ff1f560bb6dec0d4fc02b267a7f63860f20c9_2_690x262.jpeg">
 
 Proof of concept currently. May not work as expected. Currently only tested on Windows & Mac.
 
@@ -901,34 +910,24 @@ The battlemap will sync its state to the Initiative Tracker combat - as creature
 
 # Version History
 
-See [the changelog](https://github.com/valentine195/obsidian-leaflet-plugin/blob/master/CHANGELOG.md).
+See [the changelog](./CHANGELOG.md) (upstream history up to 6.0.5).
 
 # Installation
 
-## From within Obsidian
+## Manual
 
-From Obsidian v0.9.8, you can activate this plugin within Obsidian by doing the following:
+1. Download `main.js`, `manifest.json` and `styles.css` from the [latest release](https://github.com/axelcypher/obsidian-mapbox/releases/latest).
+2. Copy them into `.obsidian/plugins/axlc-mapbox-revamped/` inside your vault.
+3. Enable **Mapbox (Revamped)** in **Settings → Community plugins**.
 
--   Open Settings > Third-party plugin
--   Make sure Safe mode is **off**
--   Click Browse community plugins
--   Search for this plugin
--   Click Install
--   Once installed, close the community plugins window and activate the newly installed plugin
+## BRAT
 
-## From GitHub
+Add `axelcypher/obsidian-mapbox` as a beta plugin in [BRAT](https://github.com/TfTHacker/obsidian42-brat).
 
--   Download the Latest Release from the Releases section of the GitHub Repository
--   Extract the plugin folder from the zip to your vault's plugins folder: `<vault>/.obsidian/plugins/`
-    Note: On some machines the `.obsidian` folder may be hidden. On MacOS you should be able to press `Command+Shift+Dot` to show the folder in Finder.
--   Reload Obsidian
--   If prompted about Safe Mode, you can disable safe mode and enable the plugin.
-    Otherwise head to Settings, third-party plugins, make sure safe mode is off and
-    enable the plugin from there.
+## Switching from the original plugin
 
-### Updates
-
-You can follow the same procedure to update the plugin
+This revamp uses its own plugin ID (`axlc-mapbox-revamped`), so it installs next to the original instead of replacing it.
+Disable the original, copy its `data.json` into `.obsidian/plugins/axlc-mapbox-revamped/` if you want to keep your settings, then enable this version.
 
 # Warning
 
@@ -937,10 +936,12 @@ Please ensure you have automated backups.
 
 # TTRPG plugins
 
-If you're using Obsidian to run/plan a TTRPG, you may find my other plugin useful:
+If you're using Obsidian to run/plan a TTRPG, you may find these plugins by the original author useful:
 
 -   [5e Statblocks](https://github.com/valentine195/obsidian-5e-statblocks/) - Create 5e-styled statblocks inside notes
 -   [Dice Roller](https://github.com/valentine195/obsidian-dice-roller) - Roll & re-roll dice in notes
 -   [Initiative Tracker](https://github.com/valentine195/obsidian-initiative-tracker) - Initiative Tracker view in Obsidian
+
+Support the original author:
 
 <a href="https://www.buymeacoffee.com/valentine195"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=valentine195&button_colour=e3e7ef&font_colour=262626&font_family=Inter&outline_colour=262626&coffee_colour=ff0000"></a>
